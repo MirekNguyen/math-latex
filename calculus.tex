@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\begin{document}
+
+\title{Calculus}
+\author{Mirek Nguyen}
+
+\maketitle
+
+\section{Limity}
+\subsection{Limita s nekonečnem v podílu}
+platí pro $\pm\infty$ \newline
+\begin{equation}
+  \lim_{x \to \infty}f(\frac{x^2-1}{x^3+1})=\frac{mensi}{vetsi}=0
+\end{equation}
+\begin{equation}
+  \lim_{x \to \infty}f(\frac{-x^4+x}{4+x-2x^4})=\frac{-1}{-2}=\frac{1}{2}
+\end{equation}
+\begin{equation}
+  \lim_{x \to \infty}f(\frac{x^{11}-x^5}{1-x^{11}})=\frac{1}{-1}=-1
+\end{equation}
+\begin{equation}
+  \lim_{x \to \infty}f(\frac{2x^4-3x+5}{1-x^3})=\frac{2*\infty}{-1}=-\infty
+\end{equation}
+
+
+\subsection{Asymptoty racionálních funkcí}
+\begin{itemize}
+  \item počítají se v krajních bodech $D(f)$
+\end{itemize}
+\begin{enumerate}
+  \item Definiční obor
+  \item Limita dané funkce (pomocí nul. bodu)
+  \item Do jakého $\infty$ se blíží
+    \begin{itemize}
+      \item $zprava^+$ nebo $zleva^-$ (vybrat si)
+      \item je to důkaz, že je asymptotou
+    \end{itemize}
+  \item Vypočítat šikmou asymptotu typu $y=kx+q$
+\end{enumerate}
+
+\section{Derivace}
+\subsection{Derivace složené funkce}
+$$f(g(x))' = f'(g(x))*g'(x)$$
+\begin{align*}
+\sqrt{6x+7}' &= f'(g(x))*g'(x)\\
+             &= \sqrt{g(x)}'*g'(x)\\
+             &= \frac{1}{2*\sqrt{g(x)}}*g'(x)\\
+             &= \frac{1}{2*\sqrt{6x+7}}*(6x+7)'\\
+             &= \frac{3}{\sqrt{6x+7}}
+\end{align*}
+\subsection{Tečna a normála}
+\begin{enumerate}
+  \item Dopočítat souřadnici pro tečný bod
+  \item Derivace směrnice tečny a normály
+    \begin{itemize}
+      \item zderivuju celou (zadanou) rovnici
+    \end{itemize}
+  \item Dosadit směrnici do rovnice
+  \item Převést do tvaru rovnice
+\end{enumerate}
+\begin{eqnarray*}
+y = mx+b & & \text{m je směrnice} \\
+t: y-y_t=k_n*(x-x_t) & & \text{rovnice tečny} \\
+n: y-y_t=k_t*(x-x_t) & & \text{rovnice normály} \\
+k_t = f'(x) & & \text{tečna} \\
+k_n = -\frac{1}{f'(x)} & & \text{normála}
+\end{eqnarray*}
+
+\subsection{Monotonie}
+\begin{enumerate}
+  \item Definiční obor
+  \item Derivace
+  \item Nulové body - znaménko $^+_-$
+  \item Intervaly, uzavřenost nul. bodů
+    \begin{itemize}
+      \item rostoucí
+      \item klesající
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Lokální extrémy}
+\begin{enumerate}
+  \item Definiční obor
+  \item Derivace
+  \item Nulové body
+    \begin{enumerate}[label=(\alph*)]
+      \item dosadit do derivace
+      \item znaménko
+    \end{enumerate}
+  \item pouze v nul. bodech jsou extrémy
+    \begin{itemize}
+      \item může jich být více
+      \item ostré lokální maximu, minimum
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Globální (absolutní) extrémy}
+\begin{enumerate}
+  \item Definiční obor (může být zadán na intervalu)
+  \item Derivace
+  \item Nulové body derivace $f'(x)=0$
+    \begin{enumerate}[label=(\alph*)]
+      \item
+      \item
+    \end{enumerate}
+  \item 
+  \item
+  \item
+  \item
+\end{enumerate}
+
+\end{document}
+
+
