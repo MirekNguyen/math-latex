@@ -1,29 +1,30 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{enumitem}
+\usepackage{pgfplots}
+\usepackage{hyperref}
 
 \begin{document}
 
 \title{Calculus}
 \author{Mirek Nguyen}
+\date{}
 
 \maketitle
+\tableofcontents
 
-\section{Limity}
+\clearpage
+\section{Limita}
 \subsection{Limita s nekonečnem v podílu}
-platí pro $\pm\infty$ \newline
-\begin{equation}
-  \lim_{x \to \infty}f(\frac{x^2-1}{x^3+1})=\frac{mensi}{vetsi}=0
-\end{equation}
-\begin{equation}
-  \lim_{x \to \infty}f(\frac{-x^4+x}{4+x-2x^4})=\frac{-1}{-2}=\frac{1}{2}
-\end{equation}
-\begin{equation}
-  \lim_{x \to \infty}f(\frac{x^{11}-x^5}{1-x^{11}})=\frac{1}{-1}=-1
-\end{equation}
-\begin{equation}
-  \lim_{x \to \infty}f(\frac{2x^4-3x+5}{1-x^3})=\frac{2*\infty}{-1}=-\infty
-\end{equation}
+\begin{itemize}
+  \item platí pro $\pm\infty$
+\end{itemize}
+\begin{align*}
+  \lim_{x \to \infty}f(\frac{x^2-1}{x^3+1})&=\frac{mensi}{vetsi}=0 \\
+  \lim_{x \to \infty}f(\frac{-x^4+x}{4+x-2x^4})&=\frac{stejny}{stejny}=\frac{-1}{-2}=\frac{1}{2} \\
+  \lim_{x \to \infty}f(\frac{x^{11}-x^5}{1-x^{11}})&=\frac{stejny}{stejny}=\frac{1}{-1}=-1 \\
+  \lim_{x \to \infty}f(\frac{2x^4-3x+5}{1-x^3})&=\frac{vetsi}{mensi}=\frac{2*\infty}{-1}=-\infty
+\end{align*}
 
 
 \subsection{Asymptoty racionálních funkcí}
@@ -41,6 +42,7 @@ platí pro $\pm\infty$ \newline
   \item Vypočítat šikmou asymptotu typu $y=kx+q$
 \end{enumerate}
 
+\clearpage
 \section{Derivace}
 \subsection{Derivace složené funkce}
 $$f(g(x))' = f'(g(x))*g'(x)$$
@@ -103,14 +105,81 @@ k_n = -\frac{1}{f'(x)} & & \text{normála}
   \item Derivace
   \item Nulové body derivace $f'(x)=0$
     \begin{enumerate}[label=(\alph*)]
-      \item
-      \item
+      \item vypočítat
+      \item vyjde konkrétní výsledek
+      \item musí být v interavalu D(f)
     \end{enumerate}
-  \item 
-  \item
-  \item
-  \item
+  \item K nul. bodům D(f) přidáme hodnotu z $f'(x)=0$
+  \item Do funkce f(x) zadáváme hodnoty x z nul. bodů
 \end{enumerate}
+
+\subsection{Konvexita, konkávita}
+\begin{enumerate}
+  \item Definiční obor
+  \item 1. derivace a 2. derivace
+  \item Nulové body
+    \begin{itemize}
+      \item podezřelé z inflexe (mění se zde znaménko)
+      \item zkontrolovat, zda leží v D(f)
+    \end{itemize}
+  \item Znaménko nulových bodů
+    \begin{itemize}
+      \item $\cup$ konvexní (+)
+      \item $\cap$ konkávní (-)
+    \end{itemize}
+  \item Interval konvexity, konkávity
+  \item Inflexe - inflexní body
+    \begin{itemize}
+      \item změna konvexity, konkávity
+      \item definovaná, spojitá v bodě
+      \item $I_1[x_1;y_1]$
+    \end{itemize}
+\end{enumerate}
+
+\clearpage
+\section{Integrace}
+\subsection{Určitý integrál pomocí přímé metody}
+\begin{equation}
+\int_{a}^{b}f(x)\,dx = \Bigr[ F'(x) \Bigr]_a^b=F(b)-F(a)
+\end{equation}
+
+\begin{enumerate}
+  \item Převést na primitivní funkci
+    \begin{itemize}
+      \item rozdělit zlomek na dva (o stejném jmenovateli)
+    \end{itemize}
+  \item Integrace (abych se zbavil $F'(x)\rightarrow$ negace)
+  \item Dosadit $\rightarrow$ budu mít 2 funkce
+  \item Odečíst
+\end{enumerate}
+
+\subsection{Určitý integrál pomocí substituce}
+\begin{itemize}\item pro složené funkce\end{itemize}
+\begin{align*}
+  \int_a^bf(g(x))*g'(x)\,dx&=
+  \Biggr|
+    \begin{alignedat}{2}
+      g(x) &=t \quad &a \rightarrow g(a) \\
+      g'(x)\,dx &=\,dt \quad &b \rightarrow g(b) \\
+    \end{alignedat}
+  \Biggr| = \\
+  \text{I. způsob} &= \int_{g(a)}^{g(b)}f(t)\,dt = \Bigr[F(t)\Bigr]_{g(a)}^{g(b)} = F(g(b))-F(g(a)) \\
+  \text{II. způsob} &= \int_?^?f(t)\,dt=\Bigr[F(t)\Bigr]_?^? = \\
+  &=\Bigr[F(t)\Bigr]_a^b = F(b)-F(a) \\
+  & \text{zde existuje mez, vrátím substituci}
+\end{align*}
+
+\subsection{Diferenciální rovnice}
+\begin{enumerate}
+  \item Převést na formu y=...
+  \item Přepsat y $\rightarrow\frac{dy}{dx}$
+  \item Vynásobím L a P rovnici "dx"
+\end{enumerate}
+
+\begin{align*}
+  y'=f(x)*g(x)=\frac{dy}{dx}\\
+  y'=\frac{dy}{dx}\\
+\end{align*}
 
 \end{document}
 
