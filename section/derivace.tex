@@ -89,6 +89,13 @@ klesající na $\langle-4;-2) \text{ a } (-2;0\rangle$
     ostré lokální minimum v $x=2$
   \end{tabular}
 \end{center}
+\begin{center}
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot[color=red,domain=-3:3,samples=100]{x^4-8*x^2+16};
+  \end{axis}
+\end{tikzpicture}
+\end{center}
 
 \subsection{Globální (absolutní) extrémy}
 \begin{enumerate}
@@ -112,6 +119,13 @@ klesající na $\langle-4;-2) \text{ a } (-2;0\rangle$
        &=\sqrt{6-x}-\sqrt{2+x}=0\\
        x&=2\in\langle-2;6\rangle
 \end{align*}
+\begin{center}
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot[color=red,domain=-10:10,samples=100]{sqrt(2+x)+sqrt(6-x)};
+  \end{axis}
+\end{tikzpicture}
+\end{center}
 
 \subsection{Konvexita, konkávita}
 \begin{enumerate}
