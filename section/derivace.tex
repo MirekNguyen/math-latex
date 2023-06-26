@@ -146,8 +146,40 @@ klesající na $\langle-4;-2) \text{ a } (-2;0\rangle$
     \begin{itemize}
       \item změna konvexity, konkávity
       \item definovaná, spojitá v bodě
-      \item $I_1[x_1;y_1]$
+      \item $I_1[x_1;y_1]$ a $I_2[x_2;y_2]$
     \end{itemize}
 
 \end{enumerate}
-
+\begin{align*}
+  f(x)&=-\frac{x^4}{12}+x^3-4x^2-10x+210
+\end{align*}
+\hrule
+$$D(f)=\mathbb{R}$$
+\begin{align*}
+  f'(x)&=-\frac{x^3}{3}+3x^2-8x-10\\
+  f''(x)&=-(x^3-6x+9)=-(x-4)*(x-2)\\
+  &\begin{alignedat}{2}
+    \text{nulové body  }\,
+    \Biggr|\,
+      \begin{alignedat}{2}
+        x-4 &=0 \quad x_1 \rightarrow &4 \\
+        x-2 &=0 \quad x_2 \rightarrow &2 \\
+      \end{alignedat}
+    \,\Biggr|
+  \end{alignedat}
+\end{align*}
+\begin{center}
+  \begin{tabular}{l}
+    Konvexní na $\langle2;4\rangle$\\
+    Konkávní na $(-\infty;2\rangle$ a $\langle4;\infty)$\\
+    Inflexe v $x=2$ a $x=4$\\
+    $I_1[2;f(2)]$ a $I_2[4;f(4)]$
+  \end{tabular}
+\end{center}
+\begin{tikzpicture}
+  \begin{axis}
+    % \addplot[color=red,domain=-10:10]{-(x^4/12)+x^3-4*x^2-10*x+210};
+    % \addplot[color=red,domain=1:7,samples=100]{-((x^4)/12)+x^3-4*x^2-10*x+210};
+    \addplot[color=red,domain=-1:5,samples=100]{(2+3*x)*e^(-x)};
+  \end{axis}
+\end{tikzpicture}

@@ -41,3 +41,17 @@
   y'=f(x)*g(x)=\frac{dy}{dx}\\
   y'=\frac{dy}{dx}\\
 \end{align*}
+\begin{center}
+    \begin{tikzpicture}[scale=1]
+    \draw (-0,0)-- (6,0); %Axis
+    \foreach \x in {2,4} {
+        \draw (\x,0.5) -- (\x,-0.5) node[below] {\x};
+    }
+    \fill (2,0) circle (0.2);
+    \draw[fill=white] (4,0) circle (0.2);
+    % \draw[decorate, decoration={brace}, yshift=2ex] (0,2) -- node{hello} (0,0);
+    \draw (1,1) node{konkávní};
+    \draw (3,1) node{konvexní};
+    \draw (5,1) node{konkávní};
+    \end{tikzpicture}
+\end{center}
