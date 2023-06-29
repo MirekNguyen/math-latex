@@ -47,3 +47,16 @@
   \end{tikzpicture}
 \end{center}
 
+\begin{center}
+  \begin{tikzpicture}[scale=1]
+    \draw (-4,0) -- (4,0);
+    \foreach \x/\s in {-2/-,0/+,2/-} {
+      \draw (\x,0.5) -- (\x,-0.5) node[below] {\x};
+    }
+    \foreach \x/\s/\t in {-3/-/\searrow,-1/+/\nearrow,1/-/\searrow,3/+/\nearrow} {
+      \draw (\x,1) node{$f'(\x)$};
+      \draw (\x,0.5) node{\s};
+      \draw (\x,-0.5) node{$\t$};
+    }
+  \end{tikzpicture}
+\end{center}
